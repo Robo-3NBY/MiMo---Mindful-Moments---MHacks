@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiMo</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#93c5fd" />
+    <link rel="stylesheet" href="MHAcss.css" />
+  </head>
+
+  <body>
+    <h1 style="text-align:center;">Depression</h1>
+    <p style="text-align:center;">
+      <b>Note:</b> Symptoms vary for everyone and this isn’t a diagnosis.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-box">
+        <h2>Common Symptoms</h2>
+        <ul>
+          <li>Persistent sadness</li>
+          <li>Loss of interest in activities</li>
+          <li>Fatigue or lack of energy</li>
+          <li>Irritability or mood swings</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>Additional Symptoms</h2>
+        <ul>
+          <li>Sleep disturbances</li>
+          <li>Changes in appetite or weight</li>
+          <li>Difficulty concentrating</li>
+          <li>Feelings of hopelessness or guilt</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>Coping Strategies</h2>
+        <ul>
+          <li>Go on short walks outside</li>
+          <li>Reconnect with your passions</li>
+          <li>Give yourself breaks when struggling</li>
+          <li>Spend some time alone to recharge</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>More Helpful Tips</h2>
+        <ul>
+          <li>Meditate or practice deep breathing</li>
+          <li>Watch comforting shows or movies</li>
+          <li>Write down your thoughts and emotions</li>
+          <li>Talk to a trusted friend or family member</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 20px;">
+      <button class="like-btn">❤️ You’re not alone (<span id="adhdLikes">0</span>)</button>
+    </div>
+    
+    <script>
+      let anxietyLikes = 0;
+      function like() {
+        anxietyLikes++;
+        document.getElementById("anxietyLikes").innerText = anxietyLikes;
+      }
+    </script>
+    <nav>
+      <a href="MiMoHome.html" class="button">Home</a>
+      <a href="Affirm.html" class="button">Affirmations</a>
+      <a href="Resources.html" class="button">Resources</a>
+      <a href="Breathing.html" class="button">Breathing</a>
+      <a href="MoodTracker.html" class="button">Mood Tracker</a>
+
+    </nav>
+  </body>
+</html>

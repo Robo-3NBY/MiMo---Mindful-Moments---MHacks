@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiMo</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#93c5fd" />
+  <link rel="stylesheet" href="MHAcss.css" />
+</head>
+<body>
+  <h1 style="text-align:center;">Mood Tracker</h1>
+
+  <div class="card">
+    <p>How are you feeling today?</p>
+    <select id="moodSelect">
+      <option value="">Select Mood</option>
+      <option value="Happy">Happy</option>
+      <option value="Sad">Sad</option>
+      <option value="Anxious">Anxious</option>
+      <option value="Neutral">Neutral</option>
+      <option value="Angry">Angry</option>
+    </select>
+
+    <textarea id="moodNote" placeholder="Add a short note" rows="3"></textarea>
+    <br>
+    <button onclick="saveMood()">Save Mood</button>
+
+    <h3>Mood History</h3>
+    <ul id="moodHistory"></ul>
+
+    <button onclick="window.location.href='MentalHealthAppThingy.html'">⬅️ Back</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', loadMoodHistory);
+
+    function saveMood() {
+      const mood = document.getElementById("moodSelect").value;
+      const note = document.getElementById("moodNote").value;
+      if(!mood) { alert("Please select a mood!"); return; }
+
+      const moods = JSON.parse(localStorage.getItem("moods")) || [];
+      moods.push({ date: new Date().toLocaleDateString(), mood, note });
+      localStorage.setItem("moods", JSON.stringify(moods));
+      loadMoodHistory();
+
+      document.getElementById("moodSelect").value = "";
+      document.getElementById("moodNote").value = "";
+    }
+
+    function loadMoodHistory() {
+      const historyList = document.getElementById("moodHistory");
+      historyList.innerHTML = "";
+      const moods = JSON.parse(localStorage.getItem("moods")) || [];
+      moods.slice().reverse().forEach(entry => {
+        const li = document.createElement("li");
+        li.textContent = `${entry.date} - ${entry.mood}${entry.note ? " — " + entry.note : ""}`;
+        historyList.appendChild(li);
+      });
+    }
+  </script>
+  <nav>
+    <a href="MiMoHome.html" class="button">Home</a>
+    <a href="Affirm.html" class="button">Affirmations</a>
+    <a href="Resources.html" class="button">Resources</a>
+    <a href="Breathing.html" class="button">Breathing</a>
+    <a href="MoodTracker.html" class="button">Mood Tracker</a>
+
+  </nav>
+</body>
+</html>

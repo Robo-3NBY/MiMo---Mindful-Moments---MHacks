@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiMo</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#93c5fd" />
+    <link rel="stylesheet" href="MHAcss.css" />
+  </head>
+  <body>
+    <h1 style="text-align:center;">ADHD</h1>
+    <p style="text-align:center;">
+      <b>Note:</b> Symptoms vary for everyone and this isn’t a diagnosis.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-box">
+        <h2>Common Symptoms</h2>
+        <ul>
+          <li>Unable to stay focused or organized</li>
+          <li>Restlessness or impulsivity</li>
+          <li>Hyperfocusing on specific tasks</li>
+          <li>Forgetfulness and losing things</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>Additional Symptoms</h2>
+        <ul>
+          <li>Difficulty following instructions</li>
+          <li>Easily distracted by surroundings</li>
+          <li>Difficulty managing time</li>
+          <li>Frequent mood swings</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>Coping Strategies</h2>
+        <ul>
+          <li>Try doing things that help you relax</li>
+          <li>Get enough quality sleep</li>
+          <li>Take breaks when you feel overwhelmed</li>
+          <li>Go on walks to ease your mind</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>More Ways to Cope</h2>
+        <ul>
+          <li>Do puzzles or coloring therapy</li>
+          <li>Start a small collection for focus</li>
+          <li>Talk to a trusted friend or family member</li>
+          <li>Break tasks into smaller steps</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 20px;">
+      <button class="like-btn">❤️ You’re not alone (<span id="ADHDLikes">0</span>)</button>
+    </div>
+    
+    <script>
+      let ADHDLikes = 0;
+      function like() {
+        ADHDLikes++;
+        document.getElementById("ADHDLikes").innerText = ADHDLikes;
+      }
+    </script>
+
+    <nav>
+      <a href="MiMoHome.html" class="button">Home</a>
+      <a href="Affirm.html" class="button">Affirmations</a>
+      <a href="Resources.html" class="button">Resources</a>
+      <a href="Breathing.html" class="button">Breathing</a>
+      <a href="MoodTracker.html" class="button">Mood Tracker</a>
+
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiMo</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#93c5fd" />
+  <link rel="stylesheet" href="MHAcss.css" />
+</head>
+  <body>
+    <h2>Resources</h2>
+        <p>It's always okay to need help! If you or someone you know needs it, here's some places to start: </p>
+        <ul>
+          <li>998: Suicide & Crisis Hotline - immediate + long-term support (NOT for emergencies) </li>
+          <li>833-789-8713: Mental Health Hotline - Free and confidential conversations, available 24/7 </li>
+          <li>1-800-950-NAMI: National Alliance on Mental Illness -  Provides info on mental conditions and how to deal with them</li>
+          <li>Text HOME to 741741 - National Text line for anyone in crisis, 24/7 </li>
+        </ul>
+
+  <form id="questions">
+  <label for="question">Enter any questions you may have: </label>
+  <input type="text" id="question" name="question" />
+  <button type="submit">Find your answers!</button>
+  <script>
+  document.getElementById("questions").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent page reload
+
+    const q = document.getElementById("question").value;
+    console.log("Name:",q);
+
+    // You can now use these values (e.g., send to server, display on page)
+  });
+</script>
+
+
+
+  
+</form>
+
+
+<nav>
+    <a href="MiMoHome.html" class="button">Home</a>
+    <a href="Affirm.html" class="button">Affirmations</a>
+    <a href="Resources.html" class="button">Resources</a>
+    <a href="Breathing.html" class="button">Breathing</a>
+    <a href="MoodTracker.html" class="button">Mood Tracker</a>
+
+  </nav>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiMo</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#93c5fd" />
+    <link rel="stylesheet" href="MHAcss.css" />
+  </head>
+
+  <body>
+    <h1>Anxiety Information</h1>
+
+    <!-- Grid container for boxes -->
+    <div class="info-grid">
+      <div class="info-box">
+        <h2>Anxiety Symptoms</h2>
+        <p><b>Note:</b> Symptoms vary for everyone and this isn’t a diagnosis.</p>
+        <ul>
+          <li>Excessive or constant worrying</li>
+          <li>Restlessness, irritability, difficulty concentrating</li>
+          <li>Rapid heartbeat, tense muscles, difficulty sleeping</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>Anxiety <b>Attack</b> Symptoms</h2>
+        <ul>
+          <li>Chest pain or discomfort</li>
+          <li>Shortness of breath</li>
+          <li>Dizziness or lightheadedness</li>
+          <li>Crying or feeling of impending doom</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>How to Manage an Anxiety Attack</h2>
+        <ul>
+          <li>Find a quiet place to sit or lie down</li>
+          <li>Practice deep breathing exercises</li>
+          <li>
+            Focus on your senses (5 things you can see, 4 you can touch, 3 you can hear,
+            2 you can smell, 1 you can taste)
+          </li>
+          <li>Remind yourself that the attack will pass and you are safe</li>
+          <li>Use grounding techniques (e.g., hold onto a comforting object)</li>
+          <li>Think of positive or calming things that make you happy</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h2>Coping Strategies (General)</h2>
+        <ul>
+          <li>Do deep breathing exercises</li>
+          <li>Do physical activities daily</li>
+          <li>Get 7–8 hours of sleep every night</li>
+          <li>Avoid or limit caffeine</li>
+          <li>Identify triggers and work on managing them</li>
+          <li>Find something you enjoy to distract yourself</li>
+          <li>Talk to a trusted friend, family member, or therapist</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="like-btn" onclick="like('anxiety')">
+      ❤️ You’re not alone. Click to show others that they aren't alone either :D
+      (<span id="anxietyLikes">0</span>)
+    </button>
+
+    <nav>
+      <a href="MiMoHome.html" class="button">Home</a>
+      <a href="Affirm.html" class="button">Affirmations</a>
+      <a href="Resources.html" class="button">Resources</a>
+      <a href="Breathing.html" class="button">Breathing</a>
+      <a href="MoodTracker.html" class="button">Mood Tracker</a>
+
+    </nav>
+
+    <div style="text-align:center; margin-top: 20px;">
+      <button class="like-btn">❤️ You’re not alone (<span id="anxietyLikes">0</span>)</button>
+    </div>
+
+    <script>
+      let anxietyLikes = 0;
+      function like() {
+        anxietyLikes++;
+        document.getElementById("anxietyLikes").innerText = anxietyLikes;
+      }
+    </script>
+  </body>
+</html>
